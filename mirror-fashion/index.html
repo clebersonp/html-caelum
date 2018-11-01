@@ -2,29 +2,181 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/mirror-fashion.css">
     <title>Mirror Fashion</title>
 </head>
 <body>
-    <header>
+    <!-- semantica utilizado para cabecalho da pagina-->
+    <header class="container">
+        <!-- h1 aqui eh mais para semantica-->
         <h1>
             <img src="img/logo.png" alt="Mirror Fashion">
         </h1>
+
+        <!-- Dentro do header eu consigo criar outras secoes para semanatica-->
         <section class="sacola">
             <h2>Sacola</h2>
             <p>Nenhum item</p>
         </section>
-        <nav>
+
+        <!--Nav eh utilizado para coisas relacionadas a navegação, neste caso o menu, sendo o css responsavel pelo stilo-->
+        <nav class="menu-opcoes">
             <a href="#">Sua Conta</a>
             <a href="#">Lista de Desejos</a>
             <a href="#">Cartão Fidelidade</a>
             <a href="sobre.html">Sobre</a>
             <a href="#">Ajuda</a>
         </nav>
+
     </header>
-    <main>
-        <h1>Olá, sou o index.html</h1>
+
+    <!--Semantica utilizado para o conteudo da pagina-->
+    <main class="container destaque">
+        <section class="busca">
+            <h2>Busca</h2>
+            <form>
+                <input type="search">
+                <button>Pesquisar</button>
+            </form>
+        </section>
+
+        <section class="menu-departamentos">
+            <h2>Departamentos</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">blusas e camisas</a></li>
+                    <li><a href="#">calças</a></li>
+                    <li><a href="#">saias</a></li>
+                    <li><a href="#">vestidos</a></li>
+                    <li><a href="#">sapatos</a></li>
+                    <li><a href="#">bolsas e carteiras</a></li>
+                    <li><a href="#">acessorios</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="banner-destaque">
+            <!--figure usado para infomacao-->
+            <figure>
+                <img src="img/destaque-home.png" alt="Destaque Home">
+            </figure>
+        </section>
+
+        <section class="painel novidades">
+            <h2>Novidades</h2>
+            <!-- ol>(li>a[href="produto.html"]>figure>img[src="img/produtos/miniatura$.png" alt="Produto$"]+figcaption{Produto$})*6-->
+            
+            <ol>
+                <li>
+                    <a href="produto.html">
+                        <figure>
+                            <img src="img/produtos/miniatura1.png" alt="Produto1">
+                            <figcaption>Produto1</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="produto.html">
+                        <figure>
+                            <img src="img/produtos/miniatura2.png" alt="Produto2">
+                            <figcaption>Produto2</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="produto.html">
+                        <figure>
+                            <img src="img/produtos/miniatura3.png" alt="Produto3">
+                            <figcaption>Produto3</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="produto.html">
+                        <figure>
+                            <img src="img/produtos/miniatura4.png" alt="Produto4">
+                            <figcaption>Produto4</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="produto.html">
+                        <figure>
+                            <img src="img/produtos/miniatura5.png" alt="Produto5">
+                            <figcaption>Produto5</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="produto.html">
+                        <figure>
+                            <img src="img/produtos/miniatura6.png" alt="Produto6">
+                            <figcaption>Produto6</figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ol>
+
+        </section>
+
+        <section class="painel mais-vendidos">
+                <h2>Mais Vendidos</h2>
+                <ol>
+                    <li>
+                        <a href="produto.html">
+                            <figure>
+                                <img src="img/produtos/miniatura7.png" alt="Produto7">
+                                <figcaption>Produto7</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="produto.html">
+                            <figure>
+                                <img src="img/produtos/miniatura8.png" alt="Produto8">
+                                <figcaption>Produto8</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="produto.html">
+                            <figure>
+                                <img src="img/produtos/miniatura9.png" alt="Produto9">
+                                <figcaption>Produto9</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="produto.html">
+                            <figure>
+                                <img src="img/produtos/miniatura10.png" alt="Produto10">
+                                <figcaption>Produto10</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="produto.html">
+                            <figure>
+                                <img src="img/produtos/miniatura11.png" alt="Produto11">
+                                <figcaption>Produto11</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="produto.html">
+                            <figure>
+                                <img src="img/produtos/miniatura12.png" alt="Produto12">
+                                <figcaption>Produto12</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                </ol>
+        </section>
+
     </main>
+
+    <!--Semantica utilizado para o rodape da pagina-->
     <footer>
 
     </footer>

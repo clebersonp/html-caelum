@@ -1,17 +1,135 @@
+/* * {
+    border: 1px solid red;
+} */
+
+
+/*mais generico fica em cima e o mais especifico fica em baixo*/
+
 body {
     color: #333;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
+/*conceito de container eh para limitar um tamanho por conjunto
+de elementos que pode ser reaproveitado em outros lugares*/
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 940px;
+}
+
+.destaque {
+    margin-top: 10px;
+}
+
+main {
+    /* border: 1px solid rebeccapurple; */
+    /* background: lightcoral; */
+}
+
+header {
+    /* background-color: pink; */
+
+    /*os filhos de header serao relativos ao header e nao a pagina*/
+    position: relative;
+}
+
 .sacola {
+    /*estilo para a imagem de fundo*/
     background-image: url(../img/sacola.png);
     background-repeat: no-repeat;
     background-position: right;
-    width: 120px;
+
+    font-size: 14px;
+    padding-right: 40px;
+    padding-top: 5px;
     text-align: right;
-    padding-right: 80px;
+    width: 140px;
+    position: absolute;
+    top: 10px;
+    right: 0;
 }
 
 .sacola h2 {
     margin: 0;
 }
+
+.sacola p {
+    margin: 0;
+}
+
+.menu-opcoes {
+    /* background: blue; */
+    font-size: 15px;
+
+    /*usado para sair do elemento pai a nivel z*/
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.menu-opcoes a {
+    color: #036;
+    padding: 2px 10px;
+}
+
+.busca, .menu-departamentos {
+    background-color: #dcdcdc;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    margin-right: 10px;
+    width: 220px;
+
+    float: left;
+}
+
+.menu-departamentos {
+    /*o clear eh para anular o efeito float left de outro componente que pode afeta-lo,
+    nesse caso anula o float left da classe .busca*/
+    clear: left;
+
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.busca h2, .busca form, .menu-departamentos h2 {
+    margin: 10px;
+}
+
+/*alterar o tamanho do input que tiver a propriedade do type search,
+isso eh um seletor de atributo*/
+.busca input[type=search] {
+    width: 170px;
+}
+
+.menu-departamentos li {
+    background-color: white;
+    margin-bottom: 1px;
+    padding: 5px 10px;
+}
+
+.menu-departamentos a {
+    color: #333;
+    text-decoration: none;
+
+    /*diplay block para ampliar a area de click da palavra*/
+    display: block;
+}
+
+.novidades {
+    background-color: pink;
+    float: left;
+}
+
+/*calc a partir do css3*/
+.painel {
+    width: calc( 100%/ 2 - 10px );
+    float: left;
+}
+
+.mais-vendidos {
+    background-color: rgb(0, 255, 170);
+    float: right;
+}
+
