@@ -117,19 +117,49 @@ isso eh um seletor de atributo*/
     display: block;
 }
 
-.novidades {
-    background-color: pink;
-    float: left;
-}
-
 /*calc a partir do css3*/
 .painel {
-    width: calc( 100%/ 2 - 10px );
+    width: calc( 100%/ 2 - 25px );
+    margin: 10px 0;
+    padding: 10px;
+    /* float: left; não preciso utilizar pois o mais-vendidos já está usando o right*/
+}
+
+.novidades {
+    background-color: #F5DCDC;
     float: left;
 }
 
 .mais-vendidos {
-    background-color: rgb(0, 255, 170);
+    background-color: #DCDCF5;
     float: right;
 }
 
+.painel li {
+    display: inline-block;
+    vertical-align: top;
+    width: 140px;
+
+    margin: 2px;
+    padding-bottom: 10px;
+}
+
+.painel h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+
+.painel a{
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.banner-destaque {
+    /* background: #456; */
+    text-align: right;
+}
