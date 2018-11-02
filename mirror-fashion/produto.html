@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/mirror-fashion.css">
+    <title>Mirror Fashion</title>
+</head>
+<body>
+
+    <!-- semantica utilizado para cabecalho da pagina-->
+    <header class="container">
+        <!-- h1 aqui eh mais para semantica-->
+        <h1>
+            <img src="img/logo.png" alt="Mirror Fashion">
+        </h1>
+
+        <!-- Dentro do header eu consigo criar outras secoes para semanatica-->
+        <section class="sacola">
+            <h2>Sacola</h2>
+            <p>Nenhum item</p>
+        </section>
+
+        <!--Nav eh utilizado para coisas relacionadas a navegação, neste caso o menu, sendo o css responsavel pelo stilo-->
+        <nav class="menu-opcoes">
+            <a href="#">Sua Conta</a>
+            <a href="#">Lista de Desejos</a>
+            <a href="#">Cartão Fidelidade</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="#">Ajuda</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <section>
+            <h1>Camiseta Ecko Caveira Bad to the Bone</h1>
+            <p>por apenas R$ 48,95</p>
+
+            <form action="#">
+                <fieldset>
+                    <legend>Escolha a cor:</legend>
+
+                    <input type="radio" name="cor" value="rosa" id="rosa">
+                    <label for="rosa">
+                        <span>Rosa</span>
+                        <img src="img/produtos/foto1-rosa.png" alt="Camiseta Rosa">
+                    </label>
+
+                    <input type="radio" name="cor" value="verde" id="verde">
+                    <label for="verde">
+                            <span>Verde</span>
+                            <img src="img/produtos/foto1-verde.png" alt="Camiseta Verde">
+                    </label>
+
+                    <input type="radio" name="cor" value="azul" id="azul">
+                    <label for="azul">
+                            <span>Azul</span>
+                            <img src="img/produtos/foto1-azul.png" alt="Camiseta Azul">
+                    </label>
+
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <!--Semantica utilizado para o rodape da pagina-->
+    <footer>
+        <div class="container">
+            <img src="img/logo-rodape.png" alt="Mirror Fashion">
+
+            <section class="redes-sociais">
+                <a href="http://facebook.com">Facebook</a>
+                <a href="http://twitter.com">Twitter</a>
+                <a href="https://plus.google.com/discover">Google</a>
+            </section>
+        </div>
+    </footer>
+
+</body>
+</html>

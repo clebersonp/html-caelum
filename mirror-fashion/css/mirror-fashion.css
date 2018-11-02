@@ -48,6 +48,8 @@ header {
     position: absolute;
     top: 10px;
     right: 0;
+
+    transition: 0.1s ease-out;
 }
 
 .sacola h2 {
@@ -56,6 +58,12 @@ header {
 
 .sacola p {
     margin: 0;
+}
+
+.sacola:hover {
+    transform: scale(1.05) rotate(-2deg);
+    transition: 0.1s ease-in;
+    color: rgb(223, 196, 39, 0.8);
 }
 
 .menu-opcoes {
@@ -71,6 +79,7 @@ header {
 .menu-opcoes a {
     color: #036;
     padding: 2px 10px;
+    text-decoration: none;
 }
 
 .menu-opcoes a:hover {
@@ -212,12 +221,17 @@ isso eh um seletor de atributo*/
     transition: 0.7s ease-out;
 }
 
-/*animar o as imagens do painel*/
+
 .painel li:hover {
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 0 5px #333;
     transition: box-shadow 0.7s ease-in;
     transform: scale(1.2) rotate(-5deg);
+}
+
+/*animar o as imagens do painel*/
+.painel li:nth-child(even):hover {
+    transform: scale(1.2) rotate(5deg);
 }
 
 .painel h2 {
@@ -283,3 +297,109 @@ footer .redes-sociais a {
     text-indent: 9999px;
     margin-left: 20px;
 }
+
+
+
+/*Mobile=====*/
+/*crio uma condição para dizer quando mostrar no mobile*/
+@media(max-width:500px) {
+    .container {
+        width: 96%;
+    }
+
+    header h1 {
+        text-align: center;
+    }
+
+    header h1 img {
+        max-width: 50%;
+    }
+
+    .sacola {
+        background-size: 14px;
+        height: 30px;
+    }
+
+    .sacola h2, .sacola p {
+        display: none;
+    }
+
+    .menu-opcoes {
+        position: static;
+        text-align: center;
+    }
+
+    .busca,
+    .menu-departamentos,
+    .banner-destaque img {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .painel {
+        width: auto;
+    }
+
+    .painel li {
+        width: 31%;
+    }
+
+    .painel img {
+        width: 100%;
+    }
+}
+
+@media(min-width: 600px) and (max-width: 749px) {
+
+    header h1 {
+        margin: 5px 0;
+    }
+
+    .menu-departamentos {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    .menu-departamentos nav > a {
+        column-count: 2;
+    }
+}
+
+@media(min-width: 750px) and (max-width: 939px) {
+
+    header h1 {
+        text-align: left;
+    }
+
+    .menu-opcoes {
+        position: absolute;
+    }
+
+    .sacola {
+        display: block;
+    }
+
+    .painel li {
+        width: 15%;
+    }
+
+    .busca,
+    .menu-departamentos {
+        margin-right: 1%;
+        width: 30%;
+    }
+
+    .menu-departamentos nav > ul {
+        column-count: 1;
+    }
+
+    .banner-destaque img {
+        width: 69%;
+    }
+}
+
+/*
+@media(min-width: 400px) and (max-width: 939px) {
+
+}
+*/
