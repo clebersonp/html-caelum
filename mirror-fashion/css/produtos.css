@@ -1,0 +1,221 @@
+/*adicionar um efeito quando passar o mouse em cima da bolinha*/
+.cores label:hover::after {
+    border: 6px solid rgba(0, 0, 0, 0.1);
+}
+
+/*secao produto*/
+.produto {
+    color: #333;
+    line-height: 1.3;
+    margin-top: 2em;
+}
+
+.produto h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.produto p {
+    font-size: 1.2em;
+    font-style: italic;
+    margin-bottom: 1em;
+}
+
+.produto legend {
+    display: block;
+    
+    /*forma resumida por, font-weight:bold; font-size:0.9em; line-height:2.5; font-family:Arial*/
+    font: bold 0.9em/2.5 Arial;
+    text-transform: uppercase;
+}
+
+/*o fieldset tera essa classe*/
+.cores {
+    /*fazer com que todos os position:absolute que estiverem dentro do fieldset serao relativos a ele*/
+    position: relative;
+    padding-top: 90px;
+}
+
+/*corrigir o espacamento do chrome e firefox, sera absolute em relacao ao fieldset*/
+.cores legend {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*fazer com que a img dentro da label tenha seu tamanho a 100% do tamanho do fieldset para nao transbordar*/
+.cores label img {
+    /*por default a tag img eh inline, estou forcando block para ocupar toda a horizontal*/
+    display: block;
+    max-width: 100%;
+}
+
+/*pseudo class after*/
+.cores label::after {
+    
+    /*o content e obrigatorio com o after e before*/
+    content: '';
+
+    /*block pois um label eh, por default, inline*/
+    display: block;
+
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+
+    /*essa propriedade mantem a altura e largura sempre com 50px.
+    ou seja: conteudo + padding + border = mantem o tamanho original do elemento */
+    box-sizing: border-box;
+
+    /*trazer para frente o elemento*/
+    position: absolute;
+    top: 30px; /*top usado com absolute*/
+
+    /*suavizar quando mostrar a borda*/
+    border: 6px solid rgba(0, 0, 0, 0);
+    transition: 1s;
+
+    /*adicionar um cursor ao passar o mouse sobre as bolinhas*/
+    cursor: pointer;
+}
+
+/*logo apos o label que eh filha de cores com a propriedade for = verde*/
+.cores label[for=verde]::after {
+    background-color: #33CC66;
+    left: 0; /*atua por causa do position:absolute*/
+}
+
+.cores label[for=rosa]::after {
+    background-color: #FF6666;
+    left: 60px;
+}
+
+.cores label[for=azul]::after {
+    background-color: #6666FF;
+    left: 120px;
+}
+
+/*apos o label que seu irmao direto a cima eh um input e está checked e eh filho de cores*/
+.cores input:checked + label::after {
+    border: 6px solid rgba(0, 0, 0, 0.3);
+}
+
+.cores input[type=radio] {
+    /*o display none esconde o elemento html*/
+    display: none;
+}
+
+/*elemento img que eh filho de label que a irma acima de label eh um input não checkado e que eh filho da classe cores*/
+.cores input:not(:checked) + label img {
+    display: none;
+}
+
+/*botao comprar*/
+.comprar {
+    background: #91BD3C;
+    border: none;
+    color: #333;
+
+    font-size: 1.4em;
+    text-transform: uppercase;
+
+    box-shadow: 0 1px 3px #777;
+
+    display: block;
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    cursor: pointer;
+    
+    box-sizing: border-box;
+    border: 6px solid rgba(0, 0, 0, 0);
+    transition: 1s;
+}
+
+.comprar:hover {
+    border: 6px solid rgba(0, 0, 0, 0.1);
+    transition: 1s;
+
+}
+
+
+
+/*
+
+unidade de medida em:
+
+em eh a quantidade x a media de px;
+
+<section> se o section tiver font-size = 10px;
+    <h1>texto</h1> e o h1 tiver o font-size = 2em será igual a: 2 x 10px = 20px;
+    <h1>texto<span>texto</span></h1>se colocar o font-size no span para 5em: o h1 será 20px e o span será 5 x 20px = 100px;
+</section>
+
+tomar cuidado pois o em herda o px do pai direto, ou seja o h1 é pai direto de span
+
+eh bom para responsabilidade
+
+
+*/
+
+
+
+/*media, sobrescrevendo o layout anterior para telas maiores, responsividade*/
+
+@media (min-width: 630px) {
+    .produto {
+        /*a foto vai se posicionar absolutamente com relação a esse elemento, por isso preciso estar posicionado*/
+        position: relative;
+
+        /*deixar 40% de espaço em branco na esquerda para foto ocupar*/
+        padding-left: 40%;
+    }
+
+    /*fieldset*/
+    .cores {
+        /*estava relative antes; reinicio para static para evitar que a foto se posicione com relação a min*/
+        position: static;
+
+        /*zerando o padding-top que tinha antes e não preciso mais*/
+        padding: 0;
+    }
+
+    .cores legend {
+        /*estava absolute antes, para ter o mesmo comportamento no chrome e no firefox,
+        agora podemos voltar ao fluxo da pagina*/
+        position: static;
+    }
+
+    .cores label img {
+        /*imagem se posiciona absolutamente a esquerda com relacao ao .produto*/
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .cores label::after {
+        position: static;
+        float: left;
+    }
+
+    .cores label img {
+        max-width: 35%;
+        max-height: 100%;
+    }
+
+    .produto {
+        font-size: 1.2em;
+    }
+
+    .cores label::after {
+        margin-right: 10px;
+    }
+
+    fieldset {
+        display: inline-block;
+        vertical-align: top;
+
+        margin: 1em 0;
+        min-width: 240px;
+        width: 45%;
+    }
+}

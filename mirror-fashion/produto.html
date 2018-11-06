@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/mirror-fashion.css">
+    <link rel="stylesheet" href="css/produtos.css">
     <title>Mirror Fashion</title>
 </head>
+
 <body>
 
     <!-- semantica utilizado para cabecalho da pagina-->
@@ -34,34 +36,51 @@
 
     </header>
 
-    <main>
-        <section>
+    <main class="container">
+        <!--secao Produto-->
+        <section class="produto">
             <h1>Camiseta Ecko Caveira Bad to the Bone</h1>
             <p>por apenas R$ 48,95</p>
 
             <form action="#">
-                <fieldset>
+                <!-- agrupar elementos de form com fieldset -->
+                <fieldset class="cores">
+
+                    <!--tag propria do fieldset, titulo do fieldset-->
                     <legend>Escolha a cor:</legend>
 
+                    <input type="radio" name="cor" value="verde" id="verde" checked>
+                    <label for="verde">
+                        <img src="img/produtos/foto1-verde.png" alt="Camiseta Verde">
+                    </label>
+                    
+                    <!-- o name do campo deixa os radios buttons agrupados, fazendo com que apenas um seja selecionado-->
+                    <!-- tag input nao aceita muitos estilos, somente alguns-->
                     <input type="radio" name="cor" value="rosa" id="rosa">
                     <label for="rosa">
-                        <span>Rosa</span>
+                        <!-- o alt eh utilizado para acessibilidade para deficientes visuais-->
                         <img src="img/produtos/foto1-rosa.png" alt="Camiseta Rosa">
-                    </label>
-
-                    <input type="radio" name="cor" value="verde" id="verde">
-                    <label for="verde">
-                            <span>Verde</span>
-                            <img src="img/produtos/foto1-verde.png" alt="Camiseta Verde">
                     </label>
 
                     <input type="radio" name="cor" value="azul" id="azul">
                     <label for="azul">
-                            <span>Azul</span>
-                            <img src="img/produtos/foto1-azul.png" alt="Camiseta Azul">
+                        <img src="img/produtos/foto1-azul.png" alt="Camiseta Azul">
                     </label>
 
                 </fieldset>
+
+                <fieldset class="tamanhos">
+                    <legend>Escolha o tamanho</legend>
+                    <input type="range" min="36" max="46" step="2" name="tamanho" value="42" id="tamanho">
+                    <label for="tamanho">
+                        Value
+                    </label>
+                </fieldset>
+
+                <!-- tag do html 5, tem mais semantica-->
+                <button class="comprar">
+                    Comprar
+                </button>
             </form>
         </section>
     </main>
@@ -80,4 +99,5 @@
     </footer>
 
 </body>
+
 </html>

@@ -298,8 +298,6 @@ footer .redes-sociais a {
     margin-left: 20px;
 }
 
-
-
 /*Mobile=====*/
 /*crio uma condição para dizer quando mostrar no mobile*/
 @media(max-width:500px) {
@@ -347,6 +345,10 @@ footer .redes-sociais a {
     .painel img {
         width: 100%;
     }
+
+    footer {
+        width: max-content;
+    }
 }
 
 @media(min-width: 600px) and (max-width: 749px) {
@@ -362,6 +364,10 @@ footer .redes-sociais a {
 
     .menu-departamentos nav > a {
         column-count: 2;
+    }
+
+    footer {
+        width: max-content;
     }
 }
 
@@ -395,6 +401,10 @@ footer .redes-sociais a {
 
     .banner-destaque img {
         width: 69%;
+    }
+
+    footer {
+        width: max-content;
     }
 }
 
