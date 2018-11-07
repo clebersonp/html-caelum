@@ -36,53 +36,91 @@
 
     </header>
 
-    <main class="container">
-        <!--secao Produto-->
-        <section class="produto">
-            <h1>Camiseta Ecko Caveira Bad to the Bone</h1>
-            <p>por apenas R$ 48,95</p>
+    <main class="produto-back">
+        <div class="container">
+            <!--secao do Produto-->
+            <section class="produto">
+                <h1>Camiseta Ecko Caveira Bad to the Bone</h1>
+                <p>por apenas R$ 48,95</p>
 
-            <form action="#">
-                <!-- agrupar elementos de form com fieldset -->
-                <fieldset class="cores">
+                <form action="checkout.html" method="POST">
+                    <!-- agrupar elementos de form com fieldset -->
+                    <fieldset class="cores">
 
-                    <!--tag propria do fieldset, titulo do fieldset-->
-                    <legend>Escolha a cor:</legend>
+                        <!--tag propria do fieldset, titulo do fieldset-->
+                        <legend>Escolha a cor:</legend>
 
-                    <input type="radio" name="cor" value="verde" id="verde" checked>
-                    <label for="verde">
-                        <img src="img/produtos/foto1-verde.png" alt="Camiseta Verde">
-                    </label>
-                    
-                    <!-- o name do campo deixa os radios buttons agrupados, fazendo com que apenas um seja selecionado-->
-                    <!-- tag input nao aceita muitos estilos, somente alguns-->
-                    <input type="radio" name="cor" value="rosa" id="rosa">
-                    <label for="rosa">
-                        <!-- o alt eh utilizado para acessibilidade para deficientes visuais-->
-                        <img src="img/produtos/foto1-rosa.png" alt="Camiseta Rosa">
-                    </label>
+                        <input type="radio" name="cor" value="verde" id="verde" checked>
+                        <label for="verde">
+                            <img src="img/produtos/foto1-verde.png" alt="Camiseta Verde">
+                        </label>
 
-                    <input type="radio" name="cor" value="azul" id="azul">
-                    <label for="azul">
-                        <img src="img/produtos/foto1-azul.png" alt="Camiseta Azul">
-                    </label>
+                        <!-- o name do campo deixa os radios buttons agrupados, fazendo com que apenas um seja selecionado-->
+                        <!-- tag input nao aceita muitos estilos, somente alguns-->
+                        <input type="radio" name="cor" value="rosa" id="rosa">
+                        <label for="rosa">
+                            <!-- o alt eh utilizado para acessibilidade para deficientes visuais-->
+                            <img src="img/produtos/foto1-rosa.png" alt="Camiseta Rosa">
+                        </label>
 
-                </fieldset>
+                        <input type="radio" name="cor" value="azul" id="azul">
+                        <label for="azul">
+                            <img src="img/produtos/foto1-azul.png" alt="Camiseta Azul">
+                        </label>
 
-                <fieldset class="tamanhos">
-                    <legend>Escolha o tamanho</legend>
-                    <input type="range" min="36" max="46" step="2" name="tamanho" value="42" id="tamanho">
-                    <label for="tamanho">
-                        Value
-                    </label>
-                </fieldset>
+                    </fieldset>
 
-                <!-- tag do html 5, tem mais semantica-->
-                <button class="comprar">
-                    Comprar
-                </button>
-            </form>
-        </section>
+                    <fieldset class="tamanhos">
+                        <legend>Escolha o tamanho</legend>
+                        <input type="range" min="36" max="46" step="2" name="tamanho" value="42" id="tamanho">
+                        <label for="tamanho">
+                            Value
+                        </label>
+                    </fieldset>
+
+                    <!-- tag do html 5, tem mais semantica-->
+                    <button class="comprar">
+                        Comprar
+                    </button>
+                </form>
+            </section>
+
+            <!-- Detalhes do produto -->
+            <section class="detalhes">
+                <h2>Detalhes do Produto</h2>
+
+                <p>Esse é o melhor casaco de Cardigã que você já viu. Excelente material italiano com estampa desenhada
+                    pelos artesãos da comunidade de Krotor nas ilhas gregas. Compre já e receba hoje mesmo pela nossa
+                    entrega ajato.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Características</th>
+                            <th>Detalhe</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Modelo</td>
+                            <td>Cardigã 7845</td>
+                        </tr>
+                        <tr>
+                            <td>Material</td>
+                            <td>Algodão e poliester</td>
+                        </tr>
+                        <tr>
+                            <td>Cores</td>
+                            <td>Azul, Rosa e Verde</td>
+                        </tr>
+                        <tr>
+                            <td>Lavagem</td>
+                            <td>Lavar a mão</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
     </main>
 
     <!--Semantica utilizado para o rodape da pagina-->
