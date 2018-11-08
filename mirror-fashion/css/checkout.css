@@ -1,0 +1,8 @@
+/*borda vermelha nos inputs que usam o css do bootstrap com classe form-control*/
+.form-control:invalid {
+    border: 1px solid #CC0000;
+}
+
+.mesma-linha {
+    display: inline-flex;
+}
