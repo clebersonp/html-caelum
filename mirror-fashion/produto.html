@@ -73,9 +73,11 @@
                     <fieldset class="tamanhos">
                         <legend>Escolha o tamanho</legend>
                         <input type="range" min="36" max="46" step="2" name="tamanho" value="42" id="tamanho">
-                        <label for="tamanho">
-                            Value
-                        </label>
+                        
+                        <!-- o output eh mais semantico para falar que vai ter escrita de valor-->
+                        <output for="tamanho" name="valorTamanho">
+                            42
+                        </output>
                     </fieldset>
 
                     <!-- tag do html 5, tem mais semantica-->
@@ -136,6 +138,8 @@
         </div>
     </footer>
 
+    <script type="text/javascript" src="js/produto.js">
+    </script>
 </body>
 
 </html>
