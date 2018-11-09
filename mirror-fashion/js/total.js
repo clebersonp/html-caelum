@@ -9,7 +9,14 @@ inputQuantidade.oninput = function () {
 
   var valorTotal = preco * quantidade;
 
-  var totalFormatado = "R$ ".concat(valorTotal.toFixed(2).replace(".", ","));
+  var valorTotalFormatado = formatarValorMoedaReal(valorTotal);
 
-  outputTotal.textContent = totalFormatado;
+  outputTotal.textContent = valorTotalFormatado;
+}
+
+function formatarValorMoedaReal(valor) {
+  var valorFormatter = new Intl.NumberFormat("pt-BR",
+                            { style: "currency", currency: "BRL",
+                              minimumFractionDigits: 2 });
+  return valorFormatter.format(valor);
 }
